@@ -1,0 +1,23 @@
+<html ng-app="TaskList">
+  <head>
+  </head>
+  <body ng-controller="TasksCtrl">
+    <h1>My tasks</h1>
+    <form ng-submit="addText()">
+      <label for="name">Task</label>
+      <input type="text" ng-model="title" />
+      <input type="submit" value="save" />
+    </form>
+    <ol>
+      <li ng-repeat="n in names">
+        {{n.title}}
+      </li>
+    </ol>
+  </body>
+
+  <script src="./scripts/lib/angular.js"></script>
+  <script src="./scripts/lib/firebase.js"></script>
+  <script src="./scripts/lib/angularfire.js"></script>
+  <script src="./scripts/app.js"></script>
+  <script src="./scripts/controllers/tasks.controller.js"></script>
+</html>
